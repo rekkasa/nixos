@@ -85,6 +85,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.arekkas = {
     isNormalUser = true;
+    shell = packages.zsh;
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
   };
 
