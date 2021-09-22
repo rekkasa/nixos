@@ -1,0 +1,3 @@
+#!/bin/bash
+
+setxkbmap $(echo -e "us\ngr" | dmenu -i -p "Keyboard layout")

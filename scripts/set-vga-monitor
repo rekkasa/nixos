@@ -1,0 +1,26 @@
+#!/bin/bash
+
+ACT=`echo -e 'connect\ndisconnect' | dmenu -i -p 'VGA monitor'`
+
+case "$ACT" in
+"connect") 
+    POS=`echo -e "right\nleft" | dmenu -i -p "Position monitor"`
+    
+    case "$POS" in
+    "right") 
+        xrandr --output VGA-1 --auto && xrandr --auto --output LVDS-1 --auto --output VGA-1 --right-of LVDS-1
+        feh --bg-scale $HOME/Wallpapers/0217.jpg;;
+    "left") 
+        xrandr --output VGA-1 --auto && xrandr --auto --output LVDS-1 --auto --output VGA-1 --left-of LVDS-1
+        feh --bg-scale $HOME/Wallpapers/0217.jpg;;
+     *) 
+        notify-send -u critical 'Connection failed' 'Should be eihter <i>right</i> or <i>left</i>';;
+     esac;;
+"disconnect") 
+     xrandr --output VGA-1 --off;;
+*)
+     notify-send -u critical 'Action failed' 'Should be either <i>connect</i> or <i>disconnect</i>';;
+     
+esac
+
+

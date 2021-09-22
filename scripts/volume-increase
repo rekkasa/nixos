@@ -1,0 +1,5 @@
+#!/bin/bash
+
+amixer sset Master 10%+ 
+VOLUME=`amixer sget Master | awk '/Mono:/{print $4}'` 
+dunstify -r 1 "Volume" "${VOLUME}"

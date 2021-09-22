@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# This script makes dwm using new configuration
+
+make -C /home/arekkas/src/dwm
+status=$(echo $?)
+
+[ $status -eq 0 ] && notify-send "dwm" "Build successful" || notify-send -u critical "dwm" "Build failed"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+BRIGHT=$1
+echo $BRIGHT | tee /sys/class/backlight/intel_backlight/brightness && echo -e "Brightness set to $BRIGHT"
