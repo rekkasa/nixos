@@ -29,7 +29,7 @@
             owner = "zsh-users";
             repo = "zsh-syntax-highlighting";
 	    rev = "0.8.0-alpha1-pre-redrawhook";
-	    sha256 = lib.fakeSha256;
+	    sha256 = "1gv7cl4kyqyjgyn3i6dx9jr5qsvr7dx1vckwv5xg97h81hg884rn";
           };
           file = "zsh-syntax-highlighting.zsh";
         }
