@@ -1,8 +1,8 @@
 #!/bin/bash
 echo 'Searching...'
-WIF=`nmcli dev wifi list | awk '{print $1}' | grep -v BSSID | dmenu -i -p "Available connections"`
+WIF=`nmcli -t -f ssid dev wifi | dmenu -i -p "Available connections"`
 PSW=`echo -e '' |dmenu -p 'Password'`
-NAME=`echo -e '' |dmenu -p 'Wifi ID'`
+# NAME=`echo -e '' |dmenu -p 'Wifi ID'`
 
 echo "Connecting..."
-nmcli dev wifi connect $WIF password $PSW name $NAME
+nmcli dev wifi connect $WIF password $PSW
