@@ -96,11 +96,6 @@
     vim 
     git
     xterm
-    alacritty
-    firefox
-    pcmanfm
-    exa
-    rofi
   ];
 
 

@@ -14,6 +14,11 @@
     starship
     feh
     brave
+    alacritty
+    firefox
+    pcmanfm
+    exa
+    rofi
   ];
 
   programs.neovim = {
