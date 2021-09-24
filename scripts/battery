@@ -3,4 +3,5 @@
 CURRENT=`cat /sys/class/power_supply/BAT0/energy_now`
 FULL=`cat /sys/class/power_supply/BAT0/energy_full`
 PERC=$((100*CURRENT / FULL))
-dunstify -r 2 "Battery" "${PERC}"
+# dunstify -r 2 "Battery" "${PERC}"
+echo "Remaining battery: ${PERC}%"
