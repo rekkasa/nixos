@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  imports = [./zsh.nix ];
+  imports = [
+    ./zsh.nix 
+    ./rofi.nix
+    ./starship.nix
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -11,14 +15,12 @@
 
   home.packages = with pkgs; [
     htop
-    starship
     feh
     brave
     alacritty
-    firefox
     pcmanfm
     exa
-    rofi
+    qpdfview
   ];
 
   programs.neovim = {
@@ -39,12 +41,6 @@
  home.file."alacritty.yaml" = {
    target = ".config/alacritty/alacritty.yml";
    source = ./configs/alacritty/alacritty.yml;
-   recursive = true;
- };
-
- home.file."starship.toml" = {
-   target = ".config/starship.toml";
-   source = ./configs/starship/starship.toml;
    recursive = true;
  };
 

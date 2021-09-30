@@ -18,7 +18,7 @@
       '';
 
       shellAliases = {
-        ls = "exa --icons";
+        ls = "exa -lah --icons --group-directories-first";
         la = "exa -la";
       };
 

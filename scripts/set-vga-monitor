@@ -1,10 +1,10 @@
 #!/bin/bash
 
-ACT=`echo -e 'connect\ndisconnect' | rofi -dmenu -p 'VGA monitor'`
+ACT=`echo -e 'connect\ndisconnect' | dmenu -i -p 'VGA monitor'`
 
 case "$ACT" in
 "connect") 
-    POS=`echo -e "right\nleft" | rofi -dmenu -p "Position monitor"`
+    POS=`echo -e "right\nleft" | dmenu -i -p "Position monitor"`
     
     case "$POS" in
     "right") 
